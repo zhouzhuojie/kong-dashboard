@@ -12,7 +12,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="api in vm.resources">
+  <tr ng-repeat="api in vm.resources | orderBy:'+name'">
     <td>{{api.name}}</td>
 
     <td ng-if="env.schemas.api.properties.request_host">
